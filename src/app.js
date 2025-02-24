@@ -1,11 +1,47 @@
-import "bootstrap";
-import "./style.css";
 
+let symbols = ["♦" ,"♥", "♠", "♣"]
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+displaySimUp = document.getElementById("up-symbol")
+displaySimDown = document.getElementById("down-symbol")
+displayNumber = document.getElementById("number")
+displayTime = document.getElementById("time")
+relodpage = document.getElementById("button")
+let count = 10
+function changeCard () {
+pickRandom = Math.random() * symbols.length; 
+  randomSymbol = symbols[Math.floor(pickRandom)]
+  randomNumber = Math.floor((Math.random() *10) +1)
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+  if(randomSymbol == "♥") {
+    randomSymbol = `<span class = "red"> ♥ </span>`
+
+  }
+ 
+
+  if (randomNumber == 10) {
+   randomNumber = randomSymbol
+
+  }
+
+  displayNumber.innerHTML = randomNumber
+  displaySimDown.innerHTML = randomSymbol
+  displaySimUp.innerHTML = randomSymbol
+}
+
+function countTime () {
+count = count -1
+displayTime.innerHTML = "Seconds to change : " + count
+if (count == 0)
+  count = 10
+}
+
+document.addEventListener("DOMContentLoaded",changeCard)
+
+relodpage.addEventListener("click", ()=> {
+  location.reload(true)
+})
+
+setInterval(countTime, 1000)
+
+setInterval(changeCard, 10000)
+

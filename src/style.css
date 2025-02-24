@@ -1,5 +1,70 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
+
 
 body{
+    background: green;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+#cardbody {
     background: white;
+    justify-content: center;
+    height: 420px;
+    width: 18%;
+    margin-top: 10px;
+    border-radius: 3%;
+
+}
+
+.cardelement {
+    border-radius: 3%;
+    display: flex;
+    
+}
+
+#down-symbol {
+ margin-left: auto;
+ margin-top: 0px;
+ margin-bottom: 0px;
+ transform: rotate(180deg)
+}
+
+
+#cardmain {
+   
+    display:flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 80%;
+    
+    
+    
+    
+}
+
+#number{
+    margin: 0px 0px 0px 0px;
+    
+    padding: 0px 0px 0px 0px;
+
+}
+
+#up-symbol {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.red {
+    color: red;
+}
+
+
+
+#time {
+    color:whitesmoke;
 }
